@@ -308,7 +308,7 @@ void main()
         if (ImGui.Button("Im a button<3")) { }
 
         ImGui.Spacing();
-        ImGui.Text("Mwah i love Nessa");
+        ImGui.Text("Mwah i love Nessa (close window to exit)");
 
         ImGui.End();
     }

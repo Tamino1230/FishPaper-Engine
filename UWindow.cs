@@ -302,40 +302,13 @@ void main()
         ImGui.SetNextWindowSize(new Vector2(420, 0), ImGuiCond.FirstUseEver);
         ImGui.Begin("FishPaper");
 
-        ImGui.Text("Wallpaper settings");
+        ImGui.Text("Haiiii!");
         ImGui.Separator();
-
-        ImGui.InputText("Image path", ref _pathInput, 1024);
-        ImGui.SameLine();
-        if (ImGui.Button("Load"))
-        {
-            try
-            {
-                SetImage(_pathInput);
-            }
-            catch (Exception ex)
-            {
-                _error = ex.Message;
-            }
-        }
-
-        if (_error is not null)
-            ImGui.TextColored(new Vector4(1f, 0.4f, 0.4f, 1f), _error);
+        
+        if (ImGui.Button("Im a button<3")) { }
 
         ImGui.Spacing();
-        ImGui.Text("Display mode");
-
-        if (ImGui.RadioButton("Fit", FitMode == ImageFitMode.Fit))
-            FitMode = ImageFitMode.Fit;
-        ImGui.SameLine();
-        if (ImGui.RadioButton("Fill", FitMode == ImageFitMode.Fill))
-            FitMode = ImageFitMode.Fill;
-        ImGui.SameLine();
-        if (ImGui.RadioButton("Stretch", FitMode == ImageFitMode.Stretch))
-            FitMode = ImageFitMode.Stretch;
-
-        if (_hasTexture)
-            ImGui.Text($"Image: {_imageWidth} x {_imageHeight}");
+        ImGui.Text("Mwah i love Nessa");
 
         ImGui.End();
     }

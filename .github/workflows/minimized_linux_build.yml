@@ -24,8 +24,8 @@ jobs:
             --configuration Release \
             --runtime linux-x64 \
             --self-contained true \
-            -p:UseAppHost=false \
-            -p:PublishSingleFile=false \
+            -p:PublishSingleFile=true \
+            -p:IncludeNativeLibrariesForSelfExtract=false \
             -p:DebugType=None \
             -p:DebugSymbols=false \
             --output publish
@@ -40,15 +40,4 @@ jobs:
           path: |
             publish/FishPaper
             publish/libglfw.so.3
-          if-no-files-found: error
-      
-      
-      - name: Make executable
-        run: chmod +x publish/FishPaper
-
-      - name: Upload Linux app
-        uses: actions/upload-artifact@v4
-        with:
-          name: minimized-fishpaper-linux-build
-          path: publish/
           if-no-files-found: error

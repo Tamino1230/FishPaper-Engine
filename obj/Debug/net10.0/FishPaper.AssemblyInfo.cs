@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("FishPaper")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbc946b9d3d87b1828729827ccd2ceacf91ab098")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f1263406a53620cfdad5b023379f3e9fa2b67e2e")]
 [assembly: System.Reflection.AssemblyProductAttribute("FishPaper")]
 [assembly: System.Reflection.AssemblyTitleAttribute("FishPaper")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

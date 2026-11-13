@@ -10,29 +10,31 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checking Repository
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: .NET SDK Install
+      - name: Install .NET SDK
         uses: actions/setup-dotnet@v4
         with:
           dotnet-version: "10.0.x"
 
-      - name: Publish Project
+      - name: Publish project
         run: |
           dotnet publish FishPaper.csproj \
             --configuration Release \
             --runtime linux-x64 \
             --self-contained true \
-            -p:PublishSingleFile=true \
-            -p:IncludeNativeLibrariesForSelfExtract=true \
+            -p:PublishSingleFile=false \
             -p:DebugType=None \
             -p:DebugSymbols=false \
             --output publish
 
-      - name: Upload EXE
+      - name: Make executable
+        run: chmod +x publish/FishPaper
+
+      - name: Upload Linux app
         uses: actions/upload-artifact@v4
         with:
-          name: linux-executable
-          path: publish/FishPaper
+          name: fishpaper-linux-build
+          path: publish/
           if-no-files-found: error

@@ -30,7 +30,9 @@ jobs:
             -p:DebugSymbols=false \
             --output publish
 
-          cp publish/runtimes/linux-x64/native/libglfw.so.3 publish/
+          GLFW=$(find "$HOME/.nuget/packages" -path '*/runtimes/linux-x64/native/libglfw.so.3' -print -quit)
+          test -n "$GLFW" || { echo "libglfw.so.3 not found in NuGet packages"; exit 1; }
+          cp "$GLFW" publish/libglfw.so.3
           chmod +x publish/FishPaper
 
       - name: Upload executable and GLFW

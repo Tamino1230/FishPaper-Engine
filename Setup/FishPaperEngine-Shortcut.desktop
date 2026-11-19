@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=FishPaper Engine
+GenericName=Starts up FishPaper
+Comment=FishPaper Startup
+Exec=.~/Documents/.fishpaper/FishPaper
+Terminal=false
+Type=Application
+X-GNOME-Autostart-enabled=true

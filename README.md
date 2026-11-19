@@ -11,7 +11,21 @@
 If you Linux Distro doesnt support two different wallpapers this application will use for every screen a different wallpaper by creating glfw windows with background images.
 
 ## How to use
-Double click and it creates on first opening a folder called `wallpapers`, put 2 image files (png, jpg, ...) into the folder and name them `0, 1, ...` corresponding to which display it will attach to.
+Open command line in the extracted folder and run with:
+```sh
+chmod +x install.sh
+./install.sh
+```
+Then the command line will prompt you!
+<3
 
 ## Run FishPaper Engine
-To use properly double click it (after setting wallpapers) and it will open up all windows. If main window is closed application will exit.
+It will autostart when PC is booting!
+Default Install Path `~Documents/FPEngine/`
+
+## Uninstalling
+Head to `~Documents/FPEngine/` and run uninstall with:
+```sh
+chmod +x uninstall.sh
+./uninstall.sh
+```
